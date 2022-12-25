@@ -14,7 +14,7 @@ function add_text_area(text=""){
 	current_id++;
 	jquery_element = $(textarea);
 	jquery_element.html(text);
-	jquery_element.bind(event_type, does_need_to_add_textarea).bind(event_type, does_need_to_remove_textarea);
+	jquery_element.bind(event_type, does_need_to_add_textarea).bind(event_type, does_need_to_remove_textarea).bind(event_type, save_to_cookies);
 	textareas.push(jquery_element);
 	list_container.appendChild(textarea);
 
@@ -52,8 +52,9 @@ function does_need_to_remove_textarea(){
 		before_last_element_value = textareas[textareas.length - 2][0].value;
 		if(last_element_value == "" && before_last_element_value == ""){
 			remove_textarea();
-        	}
+			does_need_to_remove_textarea();
         }
+    }
 
 }
 
@@ -84,11 +85,17 @@ function insert_data(lists){
 		remove_textarea()
 	}
 	lists.map(obj => JSON.stringify(obj, null, 2)).forEach(add_text_area);
+	add_text_area();
+	shuffle();
 }
 
 $('#shuffle_button').bind('click', shuffle)
+$('#music_button').bind('click', () => insert_data(test_lists))
 
-insert_data(test_lists);
+
+
+
+get_from_cookies()
 add_text_area();
 shuffle();
 
