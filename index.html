@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+<head>
+<title>Our Funky HTML Page</title>
+<meta name="description" content="Our first page">
+<meta name="keywords" content="html tutorial template">
+</head>
+
+<style>
+    .parent {
+  background: gray;
+  height: 300px;
+  width: 300px;
+  position: relative;
+}
+
+.child {
+  /* background: orange; */
+  /*width: 100px; */
+  /*height: 100px; */
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -50px 0 0 -50px;
+  text-align: center;
+  vertical-align: middle; */
+  
+
+  text-align: center;
+ display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: 60%;
+  border: 3px solid #73AD21;
+  padding: 10px;
+
+}
+
+
+.outer {
+  display: table;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.middle {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.inner {
+  margin-left: auto;
+  margin-right: auto;
+  width: fot-content;  /* Whatever width you want */
+
+  text-align: center;
+}
+
+
+.lists_container {
+	margin-top: 50px;
+margin-bottom: 10px;
+
+}
+
+.display {
+	font-size: 50px;
+}
+
+.list {
+
+	height: 200px;
+	margin-right: 10px;
+}
+    </style>
+
+<body>
+
+<div class="outer">
+  <div class="middle">
+    <div class="inner">
+	<span class="display" id="value_display">
+               
+        </span>
+
+        <div id="lists_container" class="lists_container">
+        </div>
+
+	<button id="shuffle_button"> Shuffle </button>
+    </div>
+  </div>
+</div>
+
+
+
+<script src="randomizer.js" ></script>
+<script src="music_practice.js" ></script>
+<script src="ui_manager.js" defer> </script>
+<script src="https://code.jquery.com/jquery-3.6.3.slim.min.js"> </script>
+
+
+
+</body>
+</html>
