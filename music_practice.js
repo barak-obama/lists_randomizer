@@ -1,5 +1,18 @@
 let test_lists = [
-		['C', 'G', 'D', 'A', 'A', 'E', 'E', 'B', 'F', 'Bb'],
+		[
+  "C",
+  "G",
+  "D",
+  "A",
+  "E",
+  "B",
+  "Gb/F#",
+  "Db/C#",
+  "Ab",
+  "Eb",
+  "Bb",
+  "F"
+],
 		{
                 	'Scales': {
 				'Basic': [' Minor Scale', " Major Scale"] 
