@@ -57,21 +57,33 @@ function does_need_to_remove_textarea(){
 
 }
 
+function render_lists(){
+	return textareas.map(element => element[0].value).filter(x => x).map(JSON.parse);
+}
+
 function shuffle(){
-	lists = [];
-	let random_element = multi_random(textareas.map(element => element[0].value).filter(x => x).map(JSON.parse))
+	let invert = $('#invert_lable').is(":checked");
+	let random_element = multi_random(render_lists(), invert)
 	$('#value_display').html(random_element)
+}
+
+function save_to_cookies(){
+	setCookie("saved_lists", JSON.stringify(render_lists()) ,7);
+}
+
+function get_from_cookies(){
+	let lists = getCookie("saved_lists")
+	if(lists){
+		insert_data(lists);
+	}
 }
 
 
 function insert_data(lists){
- while(textareas.length > 0){
-	remove_textarea()
-}
-
-lists.map(obj => JSON.stringify(obj, null, 2)).forEach(add_text_area);
-
-
+	while(textareas.length > 0){
+		remove_textarea()
+	}
+	lists.map(obj => JSON.stringify(obj, null, 2)).forEach(add_text_area);
 }
 
 $('#shuffle_button').bind('click', shuffle)
