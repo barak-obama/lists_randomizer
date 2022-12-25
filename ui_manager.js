@@ -74,7 +74,7 @@ function save_to_cookies(){
 function get_from_cookies(){
 	let lists = getCookie("saved_lists")
 	if(lists){
-		insert_data(lists);
+		insert_data(JSON.parse(lists));
 	}
 }
 
