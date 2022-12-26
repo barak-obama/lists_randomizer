@@ -74,6 +74,12 @@ margin-bottom: 10px;
 	height: 200px;
 	margin-right: 10px;
 }
+
+.info {
+	text-align: center;
+	margin-right: 20%;
+	margin-left: 20%
+}
     </style>
 
 <body>
@@ -92,6 +98,15 @@ margin-bottom: 10px;
   <input type="checkbox" id="invert_lable"> Invert Lable Order </input>
 
   <button id="music_button"> Load Music lists </button>
+  <div class="info"> <p> 
+	When pressing "Shuffle", a random element will be chosen from every colomn. Elements are chosen randomly. If given JSON object its done recursively on each level. Elements from arrays are chosen randomlly.
+	If desired, you can add lable to categoried, to do so, instead of putting the dada directly, put it as follows:
+		{
+			"lable": the lable,
+			"data": the data,
+		}
+	And the data will be chosen only from the data part, the rest of the object will be ignored in this case. This can be done in each leven seperatly. Press "Load Music lists" for example.
+	</p></div>
     </div>
   </div>
 </div>

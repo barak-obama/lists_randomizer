@@ -3,35 +3,33 @@
 
 
 function give_random(list, invert_label_order){
-    let rand_obj = list;
+	return new Promise((resolve, reject) => {
 
-    
+    		let rand_obj = list;
+		if(!isObj(list)){
+        		resolve(rand_obj);
+			return;
+    		}
+    		var obj_keys = Object.keys(list);
+    		var ran_key = obj_keys[Math.floor(Math.random() * obj_keys.length)];
+		rand_obj = list[ran_key]
 
-    if(!isObj(list)){
-        return rand_obj;
-    }
-    var obj_keys = Object.keys(list);
-    var ran_key = obj_keys[Math.floor(Math.random() * obj_keys.length)];
-    // console.log(ran_key)
-    rand_obj = list[ran_key]
-
-    rand_obj = extract_data(rand_obj);
-    var data = rand_obj["data"];
-    var lable = rand_obj["lable"];
-
-
-    if(invert_label_order){
-        return  lable + give_random(data, invert_label_order);
-    }
+		rand_obj = extract_data(rand_obj);
+		var data = rand_obj["data"];
+    		var lable = rand_obj["lable"];
 
 
-    return  give_random(data, invert_label_order) + lable;
-
+    		if(invert_label_order){
+        		give_random(data, invert_label_order).then(new_rand => resolve(lable + new_rand));
+			return;
+    		}
+		give_random(data, invert_label_order).then(new_rand => resolve(new_rand + lable));
+	});
 }
 
 
 function multi_random(lists, list_all_names = false, invert_order=false) {
-    return lists.map(list => give_random(list,list_all_names, invert_order))
+    return Promise.all(lists.map(list => give_random(list,list_all_names, invert_order)))
 }
 
 
@@ -56,3 +54,4 @@ function extract_data(obj){
     return {"data": obj, "lable": ""}
 
 }
+

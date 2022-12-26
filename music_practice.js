@@ -15,12 +15,18 @@ let test_lists = [
 ],
 		{
                 	'Scales': {
-				'Basic': [' Minor Scale', " Major Scale"] 
-//				"other": ["Major Pentatonic Scale", "Minor Pentatonic Scale"]
+				"lable": " Scale",
+				"data": {
+					'Basic': [' Minor', " Major"],
+//					"other": ["Major Pentatonic Scale", "Minor Pentatonic Scale"]
+				}
                 	},
 			'Chords': {
-                    		"Triads": ['Maj', "m"],
-                    		"Other": ["Maj7","7"]
+				"lable": " Chord",
+                    		"data": {
+					"Triads": [' Maj', "m"],
+                    			"Other": [" Maj7","7"]
+				}
 			}
                 }
 ]
