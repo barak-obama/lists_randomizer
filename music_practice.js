@@ -14,19 +14,38 @@ let test_lists = [
   "F"
 ],
 		{
-                	'Scales': {
-				"lable": " Scale",
-				"data": {
-					'Basic': [' Minor', " Major"],
-//					"other": ["Major Pentatonic Scale", "Minor Pentatonic Scale"]
-				}
-                	},
-			'Chords': {
-				"lable": " Chord",
-                    		"data": {
-					"Triads": [' Maj', "m"],
-                    			"Other": [" Maj7","7"]
-				}
-			}
-                }
+  "Scales": {
+    "lable": " Scale",
+    "data": {
+      "Basic": [
+        " Minor",
+        " Major",
+        " Major",
+        " Major"
+      ],
+      "Mod": [
+        " Ionian",
+        " Dorian",
+        " Phrygian",
+        " Lydian",
+        " Mixolydian",
+        " Aeolian",
+        " Locrian"
+      ]
+    }
+  },
+  "Chords": {
+    "lable": " Chord",
+    "data": {
+      "Triads": [
+        " Maj",
+        "m"
+      ],
+      "Other": [
+        " Maj7",
+        "7"
+      ]
+    }
+  }
+}
 ]
