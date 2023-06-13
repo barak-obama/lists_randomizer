@@ -16,21 +16,41 @@ let test_lists = [
   "F"
 ],
 		{
-                	'Scales': {
-				"lable": " Scale",
-				"data": {
-					'Basic': [' Minor', " Major"],
-					"Other": ["Major Pentatonic Scale", "Minor Pentatonic Scale", "Whole Tone"]
-				}
-                	},
-			'Chords': {
-				"lable": " Chord",
-                    		"data": {
-					"Triads": [' Maj', "m"],
-                    			"Other": [" Maj7","7"]
-				}
-			}
-                }
+  "Scales": {
+    "lable": " Scale",
+    "data": {
+      "Basic": [
+        " Minor",
+        " Major",
+        " Major",
+        " Major"
+      ],
+	  "Other": ["Major Pentatonic Scale", "Minor Pentatonic Scale", "Whole Tone"],
+      "Mod": [
+        " Ionian",
+        " Dorian",
+        " Phrygian",
+        " Lydian",
+        " Mixolydian",
+        " Aeolian",
+        " Locrian"
+      ]
+    }
+  },
+  "Chords": {
+    "lable": " Chord",
+    "data": {
+      "Triads": [
+        " Maj",
+        "m"
+      ],
+      "Other": [
+        " Maj7",
+        "7"
+      ]
+    }
+  }
+}
 ]
 
 let music_list_name = "music_practice"
