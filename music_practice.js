@@ -22,8 +22,6 @@ let test_lists = [
       "Basic": [
         " Minor",
         " Major",
-        " Major",
-        " Major"
       ],
 	  "Other": ["Major Pentatonic Scale", "Minor Pentatonic Scale", "Whole Tone"],
       "Mod": [
