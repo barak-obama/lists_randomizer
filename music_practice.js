@@ -6,8 +6,10 @@ let test_lists = [
   "A",
   "E",
   "B",
-  "Gb/F#",
-  "Db/C#",
+  "Gb",
+  "F#",
+  "Db",
+  "C#",
   "Ab",
   "Eb",
   "Bb",
@@ -18,7 +20,7 @@ let test_lists = [
 				"lable": " Scale",
 				"data": {
 					'Basic': [' Minor', " Major"],
-//					"other": ["Major Pentatonic Scale", "Minor Pentatonic Scale"]
+					"Other": ["Major Pentatonic Scale", "Minor Pentatonic Scale", "Whole Tone"]
 				}
                 	},
 			'Chords': {
@@ -30,3 +32,5 @@ let test_lists = [
 			}
                 }
 ]
+
+let music_list_name = "music_practice"

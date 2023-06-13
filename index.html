@@ -2,8 +2,6 @@
 <html>
 <head>
 <title>Multi List Randomizer</title>
-</head>
-
 <style>
     .parent {
   background: gray;
@@ -82,22 +80,31 @@ margin-bottom: 10px;
 }
     </style>
 
+
+</head>
 <body>
 
 <div class="outer">
   <div class="middle">
     <div class="inner">
-	<span class="display" id="value_display">
+	    <span class="display" id="value_display">
                
         </span>
 
         <div id="lists_container" class="lists_container">
         </div>
 
-	<button id="shuffle_button"> Shuffle </button>
-  <input type="checkbox" id="invert_lable"> Invert Lable Order </input>
+        <div>
+                  <button id="shuffle_button"> Shuffle </button>
+                  <input type="checkbox" id="invert_lable"> Invert Lable Order </input>
 
-  <button id="music_button"> Load Music lists </button>
+                  <select id="list_select">
+
+                  </select>
+
+                  <button id="remove_list_button"> Remove Current List</button>
+        </div>
+
   <div class="info"> <p> 
 	When pressing "Shuffle", a random element will be chosen from every colomn. Elements are chosen randomly. If given JSON object its done recursively on each level. Elements from arrays are chosen randomlly.
 	If desired, you can add lable to categoried, to do so, instead of putting the dada directly, put it as follows:
@@ -113,12 +120,13 @@ margin-bottom: 10px;
 
 
 
+
 <script src="randomizer.js" ></script>
 <script src="music_practice.js" ></script>
 <script src="cookies.js" ></script>
 <script src="ui_manager.js" defer> </script>
+<script src="list_manager.js" defer> </script>
 <script src="https://code.jquery.com/jquery-3.6.3.slim.min.js"> </script>
-
 
 
 </body>

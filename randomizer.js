@@ -16,13 +16,13 @@ function give_random(list, invert_label_order){
 
 		rand_obj = extract_data(rand_obj);
 		var data = rand_obj["data"];
-    		var lable = rand_obj["lable"];
+		var lable = rand_obj["lable"];
 
 
-    		if(invert_label_order){
-        		give_random(data, invert_label_order).then(new_rand => resolve(lable + new_rand));
+		if(invert_label_order){
+			give_random(data, invert_label_order).then(new_rand => resolve(lable + new_rand));
 			return;
-    		}
+		}
 		give_random(data, invert_label_order).then(new_rand => resolve(new_rand + lable));
 	});
 }
